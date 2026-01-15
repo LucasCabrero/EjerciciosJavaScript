@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 Condicionales</title>
+</head>
+<body>
+    <div id="cond4"></div>
+    <script>
+        let num1, num2;
+        let contenedor = document.getElementById("cond4");
+        num1= Number(window.prompt("dime un número"));
+        num2= Number(window.prompt("dime el segundo número"));
+
+        if(num1>num2){
+            contenedor.innerHTML=`<h3>El mayor es el primero ,${num1}</h3>`;
+        } else if (num2>num1){
+           contenedor.innerHTML=`<h3>El mayor es el segundo ,${num2}</h3>`; 
+        } else{
+            contenedor.innerHTML=`<h3>ESon iguales</h3>`;
+        }
+    </script>
+</body>
+</html>

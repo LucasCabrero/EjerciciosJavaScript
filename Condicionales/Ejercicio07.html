@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7 Condicionales
+
+    </title>
+</head>
+<body>
+    <script>
+    let fp, edad;
+    let input;
+
+    input = prompt("¿FP? (1 = Sí, 0 = No)", "0");
+    fp = parseInt(input);
+
+    input = prompt("¿Edad?", "0");
+    edad = parseInt(input);
+
+    if (fp === 1 && edad >= 18) {
+        document.writeln("Bienvenid@");
+    } else if (fp === 1 && edad < 18) {
+        document.writeln("NO TIENE ACCESO");
+    }
+</script>
+
+</body>
+</html>

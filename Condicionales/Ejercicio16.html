@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Ejercicio 16 Condicionales</title>
+</head>
+
+<body>
+    <script>
+        let input, mes;
+
+        do {
+            input = prompt("Mes?", "0");
+            mes = parseInt(input);
+        } while (mes < 1 || mes > 12)
+
+        if (mes > 7)
+            if (mes % 2 == 0)
+                document.write("Tiene 31 dias");
+            else
+                document.write("Tiene 30 dias");
+        else
+            if (mes % 2 == 1)
+                document.write("Tiene 31 dias");
+            else if (mes == 2)
+                document.write("Tiene 28 dias");
+            else
+                document.write("Tiene 30 dias");
+    </script>
+
+</body>
+
+</html>

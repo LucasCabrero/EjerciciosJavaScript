@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7 formularios</title>
+
+    <script>
+        function convertir(){
+            var c=document.getElementById("celsius").value;
+            var f=c*9/5+32;
+            document.getElementById("resultado").innerHTML=f+" ºF";
+        }
+    </script>
+</head>
+<body>
+    <h2>Conversión de Celsius a Fahrenheit</h2>
+
+    <form onsubmit="return false;">
+        Introduce grados Celsius:
+        <input type="text" id="celsius">
+        <button type="button" onclick="convertir()">Convertir</button>
+    </form>
+
+    <p>Resultado: <span id="resultado"></span></p>
+</body>
+</html>

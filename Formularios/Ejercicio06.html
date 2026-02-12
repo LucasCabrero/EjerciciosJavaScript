@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6 formularios</title>
+    <script>
+        function calcula() {
+            let numero = document.fdatos.entrada.value;
+            let dato = document.getElementById("lista");
+            let valor = dato.options[dato.selectedIndex].value; // .text 
+
+            let resultado = numero * valor;
+            document.getElementById("salida").innerHTML = resultado;
+        }
+    </script>
+</head>
+
+<body>
+    <form name="fdatos" onsubmit="return false;">
+        Introduce número: <input type="text" size="10" name="entrada" />
+        <b> X </b> <select id="lista" onchange="calcula()">
+            <option value="1" selected>uno</option>
+            <option value="2">dos</option>
+            <option value="3">tres</option>
+            <option value="4">cuatro</option>
+        </select>
+        <button onclick="calcula()">Calcular</button>
+    </form>
+
+    <p>Resultado: <span id="salida"></span></p>
+</body>
+
+</html>

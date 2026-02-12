@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 04 formularios</title>
+    <script>
+        function calcularPotencias() {
+            let numero = parseFloat(document.getElementById("numero").value);
+
+            let cuadrado = numero * numero;
+            let cubo = numero * numero * numero;
+
+            document.getElementById("resultado").innerHTML =
+                "Cuadrado: " + cuadrado + "<br>" +
+                "Cubo: " + cubo;
+        }
+    </script>
+</head>
+<body>
+    <h2>Calcular Cuadrado y Cubo</h2>
+
+    <form onsubmit="return false;">
+        Ingrese un número:
+        <input type="number" id="numero" required>
+        <button onclick="calcularPotencias()">Calcular</button>
+    </form>
+
+    <p id="resultado"></p>
+</body>
+</html>
